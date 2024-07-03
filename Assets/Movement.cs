@@ -7,10 +7,12 @@ public class Movement : MonoBehaviour
     public Rigidbody2D rigidbody2D;
     public KeyCode UpKey;
     public KeyCode DownKey;
-    public float speed = 2;
+    public float speed = 5;
+    public float defaultSpeed;
 
-    void Start()
+    void Awake()
     {
+        defaultSpeed = speed;
         rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
